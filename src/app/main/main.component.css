@@ -1,0 +1,542 @@
+:root {
+    --full-width: 100%;
+    --full-height: 100%;
+}
+.main-screen {
+    width: var(--full-width);
+    height: var(--full-height);
+    background-color: rgba(17, 17, 17, 1);
+    font-family: 'Inter',sans-serif;
+}
+.container {
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+}
+/****************** main-section ******************/
+/***************** left-section  *****************/
+.main-sect {
+    width: var(--full-width);
+    height: 100%;
+}
+.left-sect {
+    width: 40%;
+    height: 90vh;
+    overflow: hidden;
+}
+.left-cont {
+    padding: 1.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.image-div {
+    width: var(--full-width);
+}
+.img-container {
+    width: 160px;
+    height: 160px;
+}
+.prof-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0.2rem;
+}
+.img-container {
+    border-radius: 50%;
+}
+.name {
+    font-family: 'Inter', sans-serif;
+    margin-left: .5em;
+    white-space: nowrap;
+}
+.name > h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255, 1);
+    padding-top: 1.25rem;
+    margin: 0;
+    white-space: nowrap;
+}
+.name > h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(156, 163, 175, 1);
+    padding-top: .75rem;
+    margin: 0;
+}
+.location {
+    display: flex;
+    flex-direction: row;
+    margin: 1.24rem 0;
+    white-space: nowrap;
+}
+.loc-sect {
+    align-items: center;
+}
+.loc-sect > h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgba(156, 163, 175, 1);
+    margin: 0;
+}
+.loc-sect >span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .35rem;
+}
+.flag {
+    width: 20px;
+    height: 20px;
+}
+.contact-sect {
+    display: flex;
+    align-items: center;
+}
+.contact-sect > span {
+    margin: 0 0.5rem;
+    align-items: flex-start;
+    color: #fff;
+    margin-bottom: .6em;
+}
+.contact-sect > label {
+    font-size: 0.85rem;
+    color: rgba(37, 99, 235, 1);
+    cursor: pointer;
+}
+.contact-sect > label:hover {
+    text-decoration: underline;
+    user-select: none;
+}
+.download-resume {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.download-button {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: max-content;
+    padding: 5px 10px 5px;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    user-select: none;
+    cursor: pointer;
+}
+.download-button:hover {
+    color: black !important;
+    background: rgba(255, 255, 255, 1);
+}
+.icns {
+    width: 60%;
+    padding: 5px;
+    gap: 0.4rem;
+    position: relative;
+}
+.social-icon {
+    width: 20%;
+    font-size: 1.6rem;
+    padding: 8px 8px;
+    color: rgba(255, 255, 255, 1);
+}
+.social-icon:hover {
+    background-color: rgb(55 54 54);
+    color: rgba(255, 255, 255, 1);
+    user-select: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.paragraph {
+    margin-top: 0.6rem;
+    font-size: 0.821em;
+    font-weight: 400;
+    font-family: 'Inter',sans-serif;
+    color: rgb(84 131 233);
+}
+.get-in-touch {
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+.get-in-touch .get-in-touch-h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255, 1);
+    padding-top: 1.25rem;
+    margin: 0;
+    white-space: nowrap;
+}
+/***************** right-section  *****************/
+.right-sect {
+    width: 70%;
+    height: auto;
+    overflow-y: auto;
+    justify-content: flex-end;
+    scrollbar-width: none;
+}
+.right-sect::-webkit-scrollbar {
+    display: none;
+}
+.right-cont {
+    height: 100%;
+    padding: 1.25rem;
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.about-head {
+    margin-bottom: 1.2rem;
+}
+.about-body {
+    font-size: .99rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255, 1);
+}
+.about-body > p > span {
+    color: rgba(18, 209, 94);
+    font-size: 1.001rem;
+    font-weight: 600;
+}
+.ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.about-footer {
+    margin-top: .5rem;
+}
+.readmore {
+    cursor: pointer;
+    color: rgba(37, 99, 235, 1);
+    text-decoration: underline;
+    font-size: .75rem;
+}
+/***************** skills-section  *****************/
+.skills-body {
+    flex-direction: column;
+}
+.language-section >h2 {
+    font-size: 1.55rem;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+.inner-sect {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+.lang-container {
+    background: rgba(14, 53, 115,1);
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.language-section {
+    margin-bottom: 1rem;
+}
+.lang-container >label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 7px 12px;
+    color: rgb(110, 160, 241);
+    letter-spacing: 0.5px;
+}
+/***************** experience-section  *****************/
+.exp-body {
+    display: flex;
+    flex-direction: row;
+    margin: .8rem 0;
+    gap: 1.55rem;
+}
+.hr {
+    width: 2px;
+    border-radius: 5px;
+    background: rgba(156, 163, 175, 1);
+    border: none;
+}
+.exp-details {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+}
+.detail-head {
+    flex-direction: row;   
+    gap: 1.3rem; 
+}
+.company-logo-cont {
+    width: 99px;
+    height: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+.logo-img {
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.company-info {
+    flex-direction: column;    
+    color: rgba(255, 255, 255, 1);
+}
+.company-info >h3 {
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+.company-info > h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(209,213,219,1);
+}
+.company-info > h5 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(156, 163, 175, 1);
+}
+.detail-body {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: .5rem;
+}
+.detail-body >.dot {
+    font-size: 1rem;
+    font-weight: 500;
+    justify-self: center;
+    align-items: center;
+    color: rgba(156, 163, 175, 1);
+}
+.bdy-content {
+    font-size: .99rem;
+    font-weight: 500;
+    color: rgb(209,213,219, 1);
+}
+.get-in-touch-h1 {
+    font-size: 2rem;
+}
+/**************** customize scrollbar ****************/
+.right-sect::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.right-sect::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}
+.right-sect::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.right-sect {
+    scrollbar-color: #888 #f1f1f1;
+}
+.tooltiptext {
+    background-color: #2b2727;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    position: absolute;
+    top: -1.65rem;
+    z-index: 6;
+    font-size: 0.75rem;
+    font-weight: 450;
+    opacity: 0.8;
+}
+/*************** contact-container  ***************/
+.contact-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-shadow {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0 0 0 / 60%);
+}
+.contact-content {
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    border-radius: 8px;
+    min-width: 30%;
+}
+.content-head {
+    padding: 12px 12px 0 12px;
+}
+.content-head >h1 {
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: rgb(17, 17, 17, 1);
+    margin: 0;
+    white-space: nowrap;
+    user-select: none;
+}
+.cross-Icon {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: rgba(17, 17, 17, 1);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.cross-Icon:hover {
+    background: rgb(231, 233, 236);
+}
+#hr {
+    width: 100%;
+    height: 2px;
+    background: rgba(156, 163, 175, 1);
+    margin: .7rem 0;
+}
+.content-body {
+    padding: 0 12px 12px 12px;
+    margin-bottom: .7rem;
+}
+.linkedin-sectn >h2 {
+    font-size: 1.15rem;
+    color: rgba(17, 17, 17, 1);
+    font-weight: 500;
+    white-space: nowrap;
+    user-select: none;
+}
+.contact-lkdin {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-lkdin >span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: .95rem;
+    width: 25px;
+    height: 25px;
+    margin-right: .16rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.contact-lkdin >span:hover {
+    background: rgb(231, 233, 236);
+}
+/********************* scroll-top *********************/
+.custom-scrolltop {
+    width: 42px;
+    height: 42px;
+    background: rgb(18, 209, 94);
+    border-radius: 50%;
+    display: none;  /* here will make the display flex conditionally when intersect */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    cursor: pointer;
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+:host ::ng-deep .custom-scrolltop {
+    width: 42px;
+    height: 42px;
+    background-color: rgb(18, 209, 94);
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    &:hover {
+      background-color: rgb(18, 209, 94, 0.7);
+    }
+  
+    .p-scrolltop-icon {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #000000;
+    }
+}
+/********* Media query for laptop 1024px  *********/
+@media (max-width: 1024px) {
+    .img-container {
+        width: 149px !important;
+        height: 149px !important;
+    }
+    .left-cont { padding: 1.25rem 1.05rem 1.05rem; }
+    .name { margin-left: 0 !important; }
+    .name > h1 { font-size: 1.8rem !important; }
+    .name > h2 { font-size: 1.05rem !important; }
+    .location { margin: .8rem 0 !important; }
+    .loc-sect > h3 { font-size: .84rem !important; }
+    .contact-sect > label { font-size: .7rem !important; }
+    .download-button {
+        padding: 3px 6px 3px !important;
+        font-size: .87rem !important;
+    }
+    .social-icon { font-size: 1.15rem !important; padding: 5px !important; }
+    .get-in-touch-h1 { font-size: 1.5rem !important; }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+    .name > h1 { font-size: 1.4rem !important; }
+    .name > h2 { font-size: .94rem !important; }
+    .loc-sect > h3 { font-size: .7rem !important; }
+    .contact-sect { display: none !important; }
+    .flag { width: 17px !important;height: 17px !important; }
+    .download-resume > .icns { display: flex;gap: 0.4rem !important; }
+    .get-in-touch-h1 { font-size: 1.14rem !important; }
+    .paragraph { font-size: 0.74em !important; }
+    .about-body { font-size: .79rem !important; }
+    .about-body > p > span { font-size: .79rem !important; }
+    .language-section > h2 { font-size: 1.15rem !important; }
+    .lang-container > label { font-size: 0.63rem !important; }
+    .company-logo-cont { width: 80px !important;height: 80px !important; }
+    .company-role { font-size: .99rem !important; }
+    .company-name-loc { font-size: .8rem !important; }
+    .duration { font-size: 0.79rem !important; }
+    .bdy-content { font-size: .79rem !important; }
+}
+@media (min-width: 360px) and (max-width: 500px) {
+    .main-sect { display: block !important; }
+    .container { width: 100% !important;height: 100% !important; }
+    .left-sect { width: 100% !important;height: 100% !important; }
+    .loc-sect { display: flex !important; }
+    .loc-sect > span { margin-left: .55rem !important; }
+    .download-resume { gap: 0.7rem !important;justify-content: flex-start; }
+    .download-button { gap: 0.6rem !important; }
+    .icns { display: flex !important;gap: 0.2rem !important; }
+    .social-icon { padding: 7px !important;width: auto !important; }
+    .right-sect { width: 100% !important;height: auto !important; }
+    .right-cont { width: 100% !important; }
+    .name > h1 { font-size: 1.4rem !important; }
+    .name > h2 { font-size: .94rem !important; }
+    .loc-sect > h3 { font-size: .8rem !important; }
+    .get-in-touch-h1 { font-size: 1.14rem !important; }
+    .paragraph { font-size: 0.74em !important; }
+    .about-body { font-size: .84rem !important; }
+    .about-body > p > span { font-size: .84rem !important; }
+    .language-section > h2 { font-size: 1.15rem !important; }
+    .lang-container > label { font-size: 0.63rem !important; }
+    .company-logo-cont { width: 75px !important;height: 74px !important; }
+    .company-role { font-size: .89rem !important; }
+    .company-name-loc { font-size: .74rem !important; }
+    .duration { font-size: 0.74rem !important; }
+    .bdy-content { font-size: .74rem !important; }
+}

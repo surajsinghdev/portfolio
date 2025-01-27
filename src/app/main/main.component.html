@@ -1,0 +1,287 @@
+<div class="frame">
+    <div class="main-screen">
+        <div class="container">
+            <main class="main-sect d-flex" style="width: 100%;">
+                <section class="left-sect">
+                    <div class="left-cont">
+                        <div class="image-div">
+                            <div class="img-container">
+                                <img class="prof-image" [src]="ProfileImg || placeholderImg">
+                            </div>
+                        </div>
+                        <div class="name">
+                            <h1>Suraj Sanjay Singh</h1>
+                            <h2>Full Stack Web Developer</h2>
+                        </div>
+                        <div class="location">
+                            <div class="loc-sect d-flex">
+                                <h3>📍  Mumbai, Maharashtra IN  </h3>
+                                <span><img class="flag" src="../../assets/indiaflag.png" alt="flag" /></span>
+                            </div>
+                            <ng-template>
+                                <div class="contact-sect d-flex">
+                                    <span>  .</span>  
+                                    <label (click)="IsShowContactForm = true;">  Contact info</label>
+                                </div>
+                            </ng-template>
+                        </div>
+                        <div class="download-resume d-flex">
+                            <div class="download-button d-flex" (click)="DownloadImage()">
+                                <i class="fas fa-file-download" style="margin-left: .2rem;"></i>
+                                <span>Resume</span>
+                            </div>
+                            <div class="icns">
+                                <i class="fa fa-envelope social-icon" aria-hidden="true" (mouseover)="MouseOverSocialIcon('Mail')" 
+                                (mouseout)="tooltip = false" (click)="RedirectToSocial(1)"></i>
+                                <i class="fa-brands fa-linkedin social-icon" (mouseover)="MouseOverSocialIcon('LinkedIn')"
+                                (mouseout)="tooltip = false"  (click)="RedirectToSocial(2)"></i>
+                                <i class="fa-brands fa-instagram social-icon" (mouseover)="MouseOverSocialIcon('Instagram')"
+                                (mouseout)="tooltip = false"  (click)="RedirectToSocial(3)"></i>
+                                <ng-container *ngIf="tooltip">
+                                    <div class="tooltiptext" (click)="tooltip = false;">
+                                        <label>{{tooltiptext}}</label>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="get-in-touch">
+                            <h1 class="get-in-touch-h1">Get in Touch with Me?</h1>
+                            <p class="paragraph">#opentowork &nbsp;#openforcollaboration</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="right-sect d-flex" #rightsection> <!-- scrolling on this -->
+                    <div class="right-cont d-flex">
+                        <div class="About">
+                            <div class="about-head name" style="margin-left: 0;">
+                                <h1 style="padding-top: 0;">About</h1>
+                            </div>
+                            <div #aboutpara class="about-body" [ngClass]="{'ellipsis': IsOverflow}">
+                                <p>
+                                    I am a 22-year-old &nbsp; Full Stack Web Developer with <span>1+</span> year of professional experience. 
+                                    Currently, work at Softcon Business Solutions in Mumbai, India
+                                    <img class="flag" src="../../assets/indiaflag.png" alt="flag" />
+                                    , specializing in Angular, ASP.NET, SQL Server, 
+                                    and Tortoise SVN. 
+                                </p>
+                                <p>
+                                    Currently learning and implementing <span>browser automation</span> and 
+                                    <span>integrating AI tools</span> into projects.
+                                </p>
+                                <p>
+                                    In my free time, you will find me creating content for my LinkedIn account, 
+                                    Writing blogs on Medium, and watching podcasts.
+                                </p>
+                                
+                            </div>
+                            <ng-container *ngIf="IsOverflow">
+                                <div class="about-footer">
+                                    <span class="readmore" (click)="OnClickReadMore()">{{aboutLabel}}</span>
+                                </div>
+                            </ng-container>
+                        </div>
+                        <div class="skills">
+                            <div class="about-head name" style="margin-left: 0;">
+                                <h1>Skills</h1>
+                            </div>
+                            <div class="skills-body d-flex">
+                                <div class="language-section">
+                                    <h2>Languages</h2>
+                                    <div class="inner-sect">
+                                        <div class="lang-container" *ngFor="let language of languages;">
+                                            <label>{{language}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="framework-section language-section">
+                                    <h2>Frameworks</h2>
+                                    <div class="inner-sect">
+                                        <div class="lang-container" *ngFor="let framework of framework" 
+                                            style="background: rgba(12, 111, 52, 1);">
+                                            <label style="color: rgba(141, 247, 183, 1);">{{framework}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backend-section language-section">
+                                    <h2>Backend</h2>
+                                    <div class="inner-sect">
+                                        <div class="lang-container" *ngFor="let back of backend"
+                                           style="background: rgb(70, 16, 120);" >
+                                            <label style="color: rgb(165, 109, 217);">{{back}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="database-section language-section">
+                                    <h2>Databases</h2>
+                                    <div class="inner-sect">
+                                        <div class="lang-container" *ngFor="let data of database"
+                                           style="background: rgb(143, 26, 26);" >
+                                            <label style="color: rgb(222, 102, 102);">{{data}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="practices-section language-section">
+                                    <h2>Practices</h2>
+                                    <div class="inner-sect">
+                                        <div class="lang-container" *ngFor="let practice of practices"
+                                           style="background: rgb(129, 100, 13);" >
+                                            <label style="color: rgb(232, 196, 89);">{{practice}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <div class="about-head name" style="margin-left: 0;">
+                                <h1>Experience</h1>
+                            </div>
+                            <div class="exp-body">
+                                <div class="hr"></div>
+                                <div class="exp-details">
+                                    <div class="detail-head d-flex">
+                                        <div class="company-logo-cont">
+                                            <img class="logo-img" src="../../assets/company-logo.png" alt="softcon business soln." />
+                                        </div>
+                                        <div class="company-info d-flex">
+                                            <h3 class="company-role">Full Stack Web Developer</h3>
+                                            <h4 class="company-name-loc">Softcon Business Sol., Mumbai</h4>
+                                            <h5 class="duration">1 June 24 - Present</h5>
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Optimize data binding, eliminate unnecessary api call's by implementing RouteReuseStrategy,<br>
+                                            implemented NgZone which reduces unnecessary change detection also used trackBy for unnecessary 
+                                            DOM recreation.
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Writing clean & efficient API. <br>
+                                            Optimized, performance efficient procedure creation and Report designing.
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Integrated several build-in libraries, streamlining the development process and cutting development time.<br>
+                                            Created custom pipe, custom directive and common-component.
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Organize monthly team meetings to promote collaboration, exchange ideas, 
+                                            share best practices, and develop strategies to enhancing efficiency and 
+                                            overall performance.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-body">
+                                <div class="hr"></div>
+                                <div class="exp-details">
+                                    <div class="detail-head d-flex">
+                                        <div class="company-logo-cont">
+                                            <img class="logo-img" src="../../assets/company-logo.png" alt="softcon business soln." />
+                                        </div>
+                                        <div class="company-info d-flex">
+                                            <h3 class="company-role">Frontend Developer Intern</h3>
+                                            <h4 class="company-name-loc">Softcon Business Sol., Mumbai</h4>
+                                            <h5 class="duration">21 March 24 - April 30 24</h5>
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Create reponsive UI designs, data binding, creating API's, writing efficient query/procedures. 
+                                        </div>
+                                    </div>
+                                    <div class="detail-body">
+                                        <div class="dot d-flex">&#x2022;</div>
+                                        <div class="bdy-content">
+                                            Performed RND's and implemented new features meeting business requirements.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <div class="about-head name" style="margin-left: 0;">
+                                <h1>Education</h1>
+                            </div>
+                            <div class="edu-body exp-body">
+                                <div class="hr"></div>
+                                <div class="edu-details exp-details">
+                                    <div class="detail-head d-flex">
+                                        <div class="company-logo-cont">
+                                            <img class="logo-img" src="../../assets/MCClogo.png" alt="softcon business soln." />
+                                        </div>
+                                        <div class="company-info d-flex">
+                                            <h3 class="company-role">Bachelor of Computer Science</h3>
+                                            <h4 class="company-name-loc">MCC, Mumbai-80</h4>
+                                            <h5 class="duration">2020 - 2023</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edu-body exp-body">
+                                <div class="hr"></div>
+                                <div class="edu-details exp-details">
+                                    <div class="detail-head d-flex">
+                                        <div class="company-logo-cont">
+                                            <img class="logo-img" src="../../assets/vpmlogo.jpg" alt="softcon business soln." />
+                                        </div>
+                                        <div class="company-info d-flex">
+                                            <h3 class="company-role">Higher Secondary Certificate</h3>
+                                            <h4 class="company-name-loc">VPM, Mumbai-81</h4>
+                                            <h5 class="duration">2018 - 2020</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p-scrollTop target="parent" styleClass="custom-scrolltop" icon="pi pi-arrow-up"></p-scrollTop>
+                </section>
+            </main>
+            <!-- <div class="scroll-top-box" (click)="scrollToTop()">
+                <i style="font-size: 1.4rem;" class="fa-solid fa-arrow-up"></i> -->
+                <!-- <button pButton type="button" label="Click" ></button> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- contact page -->
+ <div class="contact-container" *ngIf="IsShowContactForm">
+    <div class="contact-shadow" (click)="IsShowContactForm = false;$event.stopPropagation();"></div>
+    <div class="contact-content">
+        <div class="content-head">
+            <h1>Suraj Sanjay Singh</h1>
+        </div>
+        <div class="cross-Icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div id="hr"></div>
+        <div class="content-body">
+            <div class="linkedin-sectn">
+                <h2>LinkedIn</h2>
+                <div class="contact-lkdin">
+                    <p>{{Socials.linkedin.slice(12)}}</p>
+                    <span><i class="fa-regular fa-share-from-square"></i></span>
+                </div>
+            </div>
+            <div class="insta linkedin-sectn">
+                <h2>Instagram</h2>
+                <div class="contact-lkdin">
+                    <p>{{Socials.instagram.slice(12)}}</p>
+                    <span><i class="fa-regular fa-share-from-square"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
